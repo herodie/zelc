@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <package name="lee" extends="json-default">
+        <!-- 定义处理用户请求的首页json 单个项目时用 -->
+        <action name="jsonwelcome" class="org.crazyit.app.action.Jsonwelcome">
+            <!-- 配置类型的json的Result -->
+            <result type="json">
+                <!-- 为该Result指定参数 -->
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+                <!--<param name="root">map</param> -->
+            </result>
+        </action>
+        <action name="guzhangchaxunAction"
+                class="org.crazyit.app.action.GuzhangchaxunAction">
+            <!-- 为两个逻辑视图配置视图页面 -->
+            <result type="json">
+                <!-- 为该Result指定参数 -->
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+                <!--<param name="root">map</param> -->
+            </result>
+        </action>
+        <!-- 定义处所有状态 json -->
+        <action name="jsonzhuangtai" class="org.crazyit.app.action.Jsonzhuangtai">
+            <!-- 配置类型的json的Result -->
+            <result type="json">
+                <!-- 为该Result指定参数 -->
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+            </result>
+        </action>
+        <!-- 定义处用户登录的action -->
+        <action name="loginAction"
+                class="org.crazyit.app.action.LoginAction">
+            <!-- 为两个逻辑视图配置视图页面 -->
+            <result name="error">/WEB-INF/content/error.jsp</result>
+            <result name="success" type="redirectAction">cheliangxuanzeAction</result>
+        </action>
+        <action name="cheliangxuanzeAction"
+                class="org.crazyit.app.action.CheliangxuanzeAction">
+            <!-- 为两个逻辑视图配置视图页面 -->
+            <result name="success">/WEB-INF/content/liechexuanze.jsp</result>
+        </action>
+        <action name="cheliangzhuangtaiAction"
+                class="org.crazyit.app.action.CheliangzhuangtaiAction">
+            <!-- 为两个逻辑视图配置视图页面 -->
+            <result name="success">/WEB-INF/content/liechezhuangtaiall.jsp</result>
+        </action>
+
+        <!-- 让用户直接访问该应用时列出所有视图页面 -->
+        <action name="*">
+            <result>/WEB-INF/content/{1}.jsp</result>
+        </action>
+    </package>
+
+</struts>    

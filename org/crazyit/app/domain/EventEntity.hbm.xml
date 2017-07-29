@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.crazyit.app.domain.EventEntity" table="cscf1s_event" schema="zelc">
+        <id name="id" column="id"/>
+        <property name="eventVesion" column="event_vesion"/>
+        <property name="eventVehicle" column="event_vehicle"/>
+        <property name="eventTime" column="event_time"/>
+        <property name="eventDigital" column="event_digital"/>
+        <property name="eventAnalog" column="event_analog"/>
+        <property name="eventLatitude" column="event_latitude"/>
+        <property name="eventLongitude" column="event_longitude"/>
+    </class>
+</hibernate-mapping>

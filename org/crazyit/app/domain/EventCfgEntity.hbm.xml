@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.crazyit.app.domain.EventCfgEntity" table="cscf1s_event_cfg" schema="zelc">
+        <id name="eId" column="e_ID"/>
+        <property name="evtId" column="evt_id"/>
+        <property name="evtVersion" column="evt_version"/>
+        <property name="evtType" column="evt_type"/>
+        <property name="evtByteOffset" column="evt_byte_offset"/>
+        <property name="evtLen" column="evt_len"/>
+        <property name="evtSystem" column="evt_system"/>
+        <property name="evtNameL1" column="evt_name_L1"/>
+        <property name="evtNameL2" column="evt_name_L2"/>
+        <property name="evtNameL3" column="evt_name_L3"/>
+        <property name="evtSign" column="evt_sign"/>
+        <property name="evtOp1" column="evt_op1"/>
+        <property name="evtOpvalue1" column="evt_opvalue1"/>
+        <property name="evtOp2" column="evt_op2"/>
+        <property name="evtOpvalue2" column="evt_opvalue2"/>
+        <property name="evtUnit" column="evt_unit"/>
+        <property name="evtBigendian" column="evt_bigendian"/>
+        <property name="evtIsstation" column="evt_isstation"/>
+    </class>
+</hibernate-mapping>

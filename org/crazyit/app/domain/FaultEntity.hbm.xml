@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.crazyit.app.domain.FaultEntity" table="cscf1s_fault" schema="zelc">
+        <id name="id" column="id"/>
+        <property name="faultVersion" column="fault_version"/>
+        <property name="faultVehicle" column="fault_vehicle"/>
+        <property name="faultId" column="fault_id"/>
+        <property name="faultTimeAppear" column="fault_time_appear"/>
+        <property name="faultTimeDisappear" column="fault_time_disappear"/>
+        <property name="faultState" column="fault_state"/>
+    </class>
+</hibernate-mapping>

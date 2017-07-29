@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.crazyit.app.domain.FaultCfgEntity" table="cscf1s_fault_cfg" schema="zelc">
+        <id name="id" column="id"/>
+        <property name="fltId" column="flt_id"/>
+        <property name="fltVersion" column="flt_version"/>
+        <property name="fltCar" column="flt_car"/>
+        <property name="fltBitOffset" column="flt_bit_offset"/>
+        <property name="fltGrade" column="flt_grade"/>
+        <property name="fltSystem" column="flt_system"/>
+        <property name="fltNameL1" column="flt_name_L1"/>
+        <property name="fltNameL2" column="flt_name_L2"/>
+        <property name="fltNameL3" column="flt_name_L3"/>
+        <property name="fltDescrL1" column="flt_descr_L1"/>
+        <property name="fltDescrL2" column="flt_descr_L2"/>
+        <property name="fltDescrL3" column="flt_descr_L3"/>
+        <property name="fltActionL1" column="flt_action_L1"/>
+        <property name="fltActionL2" column="flt_action_L2"/>
+        <property name="fltActionL3" column="flt_action_L3"/>
+    </class>
+</hibernate-mapping>

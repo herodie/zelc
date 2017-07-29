@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 指定Hibernate映射文件的DTD信息 
+ Hibernate映射文件的根元素 -->
+<hibernate-mapping package="org.crazyit.app.domain">
+ <class discriminator-value="1" name="Employee" table="emp_table">
+  <!-- 使用只读缓存 -->
+  <cache  usage="read-write"/>
+  <!-- 映射标识属性 -->
+  <id column="emp_id" name="id" type="integer">
+   <!-- 指定使用identity主键生成策略 -->
+   <generator class="identity"/>
+  </id>
+  
+  <!-- 映射普通属性 -->
+  <property column="emp_name" generated="never" lazy="false" length="50"
+   name="name" not-null="true" type="string" unique="true"/>
+  <property column="emp_pass" generated="never" lazy="false" length="50"
+   name="pass" not-null="true" type="string"/>
+  <property column="emp_quanxian" generated="never" lazy="false"
+   name="quanxian" not-null="true" type="integer"/>
+ </class>
+</hibernate-mapping>
