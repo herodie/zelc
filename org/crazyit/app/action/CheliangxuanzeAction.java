@@ -31,7 +31,7 @@ public class CheliangxuanzeAction implements Action {
         evtcfg2 = ms.getevtcfg2();
         setMap(ms.gettainewbyche(che_id,che,che_leibie,xiangmuid,evtcfg1,evtcfg2));
      //热按后map输出输出到表。
-      //success 返回到选择页面
+
         return SUCCESS;
     }
 
