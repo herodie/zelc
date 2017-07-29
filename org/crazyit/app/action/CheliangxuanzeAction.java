@@ -26,7 +26,7 @@ public class CheliangxuanzeAction implements Action {
     private List<EventCfgEntity> evtcfg2 ;
 
     @Override public String execute() throws Exception {
-//   //下面是查询一个list根据 上面3个变量
+   //下面是查询一个list根据 上面3个变量
         evtcfg1 = ms. getevtcfg1();
         evtcfg2 = ms.getevtcfg2();
         setMap(ms.gettainewbyche(che_id,che,che_leibie,xiangmuid,evtcfg1,evtcfg2));
